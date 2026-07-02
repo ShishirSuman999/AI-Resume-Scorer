@@ -1,0 +1,39 @@
+.sidebar {
+    flex: 0.2;
+    background-color: #0b0b5a;
+    color: white;
+    height: 100vh;
+    flex-shrink: 0;
+}
+
+.sidebarIcon {
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebarTopContent {
+    font-size: 24px;
+    text-align: center;
+}
+
+.sidebarOptionsBlock {
+    margin-top: 2;
+}
+
+.sidebarOption {
+    padding: 20px 30px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+.selectedOption {
+    background-color: #1a1a8c;
+}

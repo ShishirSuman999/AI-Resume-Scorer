@@ -1,0 +1,195 @@
+.Dashboard {
+    flex: 0.8;
+    height: 100vh;
+    overflow: auto;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0f2f5;
+    box-sizing: border-box;
+}
+
+.DashboardLeft {
+    width: 70%;
+    padding: 20px;
+    height: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 10px 20px;
+}
+
+.DashboardHeaderTitle {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.DashboardHeaderLargeTitle {
+    font-size: 52px;
+}
+
+.alertInfo {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 30px;
+    padding: 15px 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 6px;
+    margin: 40px 0;
+    font-size: 16px;
+    background-color: #fff3cd;
+}
+
+.DashboardInstructions {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.DashboardUploadResume {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.DashboardResumeBlock {
+    width: 65%;
+    background-color: #f0f2f5;
+    border-radius: 30px;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 6px;
+    font-size: 22px;
+}
+
+.DashboardInputField {
+    display: flex;
+    align-items: center;
+}
+
+.analyzeAIBtn {
+    font-size: 18px;
+    cursor: pointer;
+    padding: 20px 40px;
+    color: white;
+    font-weight: 600;
+    background: linear-gradient(90deg, #fca326, #f94a6b);
+    border-radius: 30px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+input {
+    display: none;
+}
+
+.jobDesc {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+
+.textArea {
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid rgb(14, 14, 97);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    width: 65%;
+    resize: none;
+}
+
+.AnalyzeBtn {
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background: linear-gradient(90deg, #fca326, #f94a6b);
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+}
+
+.DashboardRight {
+    width: 25%;
+    height: fit-content;
+    box-sizing: border-box;
+    background-color: f0f2f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    border-radius: 5px;
+}
+
+.DashboardRightTopCard {
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.24);
+}
+
+.DashboardRightTopCard div:first-child {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.profileImg {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border: 2px solid black;
+    margin-top: 20px;
+}
+
+@media screen and (max-width:780px) {
+    .Dashboard {
+        flex-direction: column;
+    }
+    .DashboardLeft {
+        width: 100%;
+    }
+    .DashboardHeaderTitle {
+        font-size: 26px;
+    }
+    .DashboardHeaderLargeTitle {
+        font-size: 34px;
+    }
+    .DashboardRight {
+        width: 100%;
+        margin-top: 30px;
+    }
+    .DashboardUploadResume {
+        flex-direction: column;
+    }
+    .DashboardResumeBlock {
+        width: 100%;
+    }
+    .DashboardInputField {
+        width: 100%;
+    }
+    label {
+        width: 100%;
+    }
+    .jobDesc {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .textArea {
+        width: 100%;
+    }
+    .AnalyzeBtn {
+        border-radius: 30px;
+        width: 100px;
+        height: fit-content;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+}
