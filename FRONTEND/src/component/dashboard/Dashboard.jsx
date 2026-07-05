@@ -1,8 +1,9 @@
 import React from 'react'
 import styles from './Dashboard.module.css'
 import Skeleton from '@mui/material/Skeleton'
+import WithAuthHOC from '../../utils/HOC/withAuthHOC'
 
-export default function Dashboard() {
+const Dashboard = () => {
   return (
     <div className={styles.Dashboard}>
       <div className={styles.DashboardLeft}>
@@ -60,3 +61,5 @@ export default function Dashboard() {
     </div>
   )
 }
+
+export default WithAuthHOC(Dashboard)

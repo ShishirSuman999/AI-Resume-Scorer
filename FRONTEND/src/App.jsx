@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom'
 import Dashboard from './component/dashboard/Dashboard'
 import History from './component/history/History'
 import Admin from './component/admin/Admin'
+import Login from './component/login/Login'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
     <div className='App'>
       <Sidebar />
       <Routes>
+        <Route path='/' element={<Login />} />
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/history' element={<History />} />
         <Route path='/admin' element={<Admin />} />

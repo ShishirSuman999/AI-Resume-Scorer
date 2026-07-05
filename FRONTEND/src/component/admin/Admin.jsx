@@ -1,8 +1,9 @@
 import React from 'react'
 import styles from './Admin.module.css'
 import Skeleton from '@mui/material/Skeleton';
+import WithAuthHOC from '../../utils/HOC/withAuthHOC';
 
-export default function Admin() {
+const Admin = () => {
   return (
     <div className={styles.Admin}>
       <div className={styles.AdminBlock}>
@@ -43,3 +44,5 @@ export default function Admin() {
     </div>
   )
 }
+
+export default WithAuthHOC(Admin)
