@@ -6,11 +6,11 @@ const app = express()
 const PORT = process.env.PORT
 
 require("./connection")
-app.get("/", (req, res) => {
-    res.send({
-        message: "Hello & welcome to our backend!"
-    })
-})
+app.use(express.json())
+
+const UserRoutes = require("./Routes/user")
+
+app.use('/api/user', UserRoutes)
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`)
