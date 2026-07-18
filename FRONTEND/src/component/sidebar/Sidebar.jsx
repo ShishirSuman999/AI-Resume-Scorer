@@ -10,7 +10,6 @@ import { Link, useLocation } from 'react-router-dom';
 export default function Sidebar() {
 
     const location = useLocation();
-    console.log(location);
 
   return (
     <div className={styles.sidebar}>

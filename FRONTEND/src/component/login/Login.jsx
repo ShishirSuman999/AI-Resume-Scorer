@@ -6,6 +6,7 @@ import { auth, provider } from '../../utils/Firebase'
 import { signInWithPopup } from 'firebase/auth'
 import { AuthContext } from '../../utils/AuthContext'
 import { useNavigate } from 'react-router-dom'
+import axios from '../../utils/axios'
 
 export default function Login() {
 
@@ -21,10 +22,17 @@ export default function Login() {
         email: user.email,
         photoURL: user.photoURL,
       }
+
+      await axios.post('/api/user', userData).then((response) => {
+        setUserInfo(response.data.user)
+        localStorage.setItem('userInfo', JSON.stringify(response.data.user))
+      }).catch((error) => {
+        console.log(error)
+      })
+
       setIsLogin(true)
-      setUserInfo(userData)
       localStorage.setItem('isLogin', true)
-      localStorage.setItem('userInfo', JSON.stringify(userData))
+      
       navigate('/dashboard')
     } catch (error) {
       alert("Login failed. Please try again.")

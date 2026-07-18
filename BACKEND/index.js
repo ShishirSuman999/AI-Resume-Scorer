@@ -1,12 +1,17 @@
 require("dotenv").config();
 
 const express = require("express")
+const cors = require("cors")
 
 const app = express()
 const PORT = process.env.PORT
 
 require("./connection")
 app.use(express.json())
+app.use(cors({
+    credentials: true,
+    origin: "http://localhost:5173"
+}))
 
 const UserRoutes = require("./Routes/user")
 const ResumeRoutes = require("./Routes/resume")
