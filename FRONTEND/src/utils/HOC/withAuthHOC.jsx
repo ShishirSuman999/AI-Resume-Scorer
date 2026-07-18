@@ -7,12 +7,12 @@ const WithAuthHOC = (WrappedComponent) => {
 
     return (props) => {
         const navigate = useNavigate()
-        const {setLogin} = useContext(AuthContext)
+        const {setIsLogin} = useContext(AuthContext)
 
         useEffect(() => {
             const isLogin = localStorage.getItem('isLogin')
             if (!isLogin) {
-                setLogin(false)
+                setIsLogin(false)
                 navigate('/')
                 return
             }
