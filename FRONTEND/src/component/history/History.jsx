@@ -33,24 +33,9 @@ const History = () => {
     <div className={styles.History}>
       <div className={styles.HistoryCardBlock}>
         {loader && <>
-          <Skeleton
-            variant="rectangular"
-            width={"100%"}
-            height={"100%"}
-            sx={{ borderRadius: "5px" }}
-          />
-          <Skeleton
-            variant="rectangular"
-            width={"100%"}
-            height={"100%"}
-            sx={{ borderRadius: "5px" }}
-          />
-          <Skeleton
-            variant="rectangular"
-            width={"100%"}
-            height={"100%"}
-            sx={{ borderRadius: "5px" }}
-          />
+          <Skeleton variant="rectangular" width={"100%"} height={"100%"} sx={{ borderRadius: "5px" }} />
+          <Skeleton variant="rectangular" width={"100%"} height={"100%"} sx={{ borderRadius: "5px" }} />
+          <Skeleton variant="rectangular" width={"100%"} height={"100%"} sx={{ borderRadius: "5px" }} />
         </>}
 
         {data.map((item, index) => {
