@@ -4,6 +4,7 @@ import Skeleton from '@mui/material/Skeleton'
 import WithAuthHOC from '../../utils/HOC/withAuthHOC'
 import axios from '../../utils/axios'
 import { AuthContext } from '../../utils/AuthContext'
+import ReactMarkdown from "react-markdown"
 
 const History = () => {
 
@@ -42,8 +43,10 @@ const History = () => {
           return (
             <div key={item._id} className={styles.HistoryCard}>
               <div className={styles.cardPercentage}>{item.score}%</div>
-              <p>Resume Name: {item.resume_name}</p>
-              <p>{item.feedback}</p>
+              <p style={{ color: "blue "}}>Resume Name: {item.resume_name}</p>
+              <div className={styles.feedback}>
+                <ReactMarkdown>{item.feedback}</ReactMarkdown>
+              </div>
               <p>Dated: {item.createdAt.slice(0, 10)}</p>
             </div>
           )

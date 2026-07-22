@@ -131,7 +131,7 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     background-color: white;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.24);
 }
@@ -147,6 +147,54 @@ input {
     border-radius: 100%;
     border: 2px solid black;
     margin-top: 20px;
+}
+
+.feedback {
+    width: 100%;
+}
+
+.feedbackMarkdown {
+    line-height: 1.6;
+}
+
+.feedbackMarkdown h1 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.feedbackMarkdown h2 {
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+.feedbackMarkdown h3 {
+    font-size: 16px;
+    margin: 6px 0;
+}
+
+.feedbackMarkdown p {
+    margin: 8px 0;
+}
+
+.feedbackMarkdown ul {
+    padding-left: 20px;
+    margin: 8px 0;
+}
+
+.feedbackMarkdown li {
+    margin-bottom: 5px;
+}
+
+.feedbackMarkdown hr {
+    margin: 12px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+.feedbackMarkdown {
+    max-height: 450px;
+    overflow-y: auto;
+    line-height: 1.6;
 }
 
 @media screen and (max-width:780px) {

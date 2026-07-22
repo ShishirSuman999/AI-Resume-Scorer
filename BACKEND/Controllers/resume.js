@@ -32,7 +32,13 @@ exports.addResume = async (req, res) => {
 
             Return ONLY in the following format:
 
-            Score: <number out of 100>
+            Score: <number out of 100>/100
+
+            Job Description:
+            - Title
+            - Company
+            - Location
+            - Description <in 1-2 sentences>
 
             Feedback:
             - Strengths

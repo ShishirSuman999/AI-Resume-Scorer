@@ -3,6 +3,7 @@ import styles from './Admin.module.css'
 import Skeleton from '@mui/material/Skeleton'
 import WithAuthHOC from '../../utils/HOC/withAuthHOC'
 import axios from '../../utils/axios'
+import ReactMarkdown from "react-markdown"
 
 const Admin = () => {
 
@@ -44,8 +45,9 @@ const Admin = () => {
               <div key={item._id} className={styles.AdminCard}>
                 <h2>{item?.user?.name}</h2>
                 <p style={{ color: "blue "}}>By: {item?.user?.email}</p>
-                <h3>Score: {item.score}%</h3>
-                <p>{item.feedback}</p>
+                <div className={styles.feedback}>
+                  <ReactMarkdown>{item.feedback}</ReactMarkdown>
+                </div>
               </div>
             )
           })

@@ -4,6 +4,7 @@ import Skeleton from '@mui/material/Skeleton'
 import WithAuthHOC from '../../utils/HOC/withAuthHOC'
 import axios from '../../utils/axios'
 import { AuthContext } from '../../utils/AuthContext'
+import ReactMarkdown from "react-markdown"
 
 const Dashboard = () => {
 
@@ -91,7 +92,9 @@ const Dashboard = () => {
               </div>
               <div className={styles.feedback}>
                 <h2>Feedback</h2>
-                <p>{result?.feedback}</p>
+                <div className={styles.feedbackMarkdown}>
+                  <ReactMarkdown>{result?.feedback}</ReactMarkdown>
+                </div>
               </div>
             </div>
           )
